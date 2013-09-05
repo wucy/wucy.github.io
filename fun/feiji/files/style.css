@@ -1,0 +1,26 @@
+* { margin:0; padding:0; border:0; list-style:none; }
+body { width:500px; margin:0 auto; }
+table { clear:both; border-spacing:1px; }
+td { background:#eee; border:1px solid #000; width:50px; height:50px; cursor:pointer; border-radius:10px; }
+td.empty { background:#fff; }
+td.head { background:#f00; }
+td.body { background:#ff0; }
+td:hover { border:1px solid #0f0; }
+td.highlight { border:1px solid #f00; }
+td.revealed { cursor:crosshair; }
+td.revealed:hover { border:1px solid #000; }
+.title { font-size:40px; text-align:center; margin:0 auto; width:200px; height:50px; }
+.title li { float:left; width:50px; height:50px; margin-left:25px; }
+.title li.first { margin-left:0; }
+.health { font-size:42px; text-align:center; margin:0 auto; width:200px; height:50px; }
+.health li { display:none; float:left; width:50px; height:50px; margin-left:25px; }
+.health li.first { margin-left:0; }
+.health .alive { color:#f00; }
+.health .dead { color:#eee; }
+#revealed-count { position:absolute; top:0; left:50%; margin-left:270px; font-size:90px; }
+#tick { position:absolute; top:100px; left:50%; margin-left:275px; font-size:20px; }
+#hint { position:absolute; top:490px; left:50%; margin-left:270px; font-size:20px; }
+#slider { position:absolute; top:600px; left:50%; margin-left:270px; font-size:16px; }
+#authors { position:absolute; top:490px; right:50%; margin-right:275px; font-size:16px; text-align:right; }
+#authors img { width:40px; height:40px; border-radius:10px; display:block; float:right; }
+#authors a { text-decoration:none; color:#007edf; display:block; clear:both; margin:15px 0; }

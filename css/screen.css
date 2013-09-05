@@ -1,0 +1,26 @@
+#left { background: #fff; color: #64f; text-align: right; float: left; }
+#right { background: #64f; color: #fff; left: 50%; text-align: left; float: right; }
+#left_bg { background: #fff; color: #64f; }
+#right_bg { left: 50%; background: #64f; color: #fff; }
+.bg { width: 50%; position: absolute; height: 100%; }
+.middle { width: 50%; font-size: 10em; font-family: Georgia, Times, sans-serif; }
+.middle h1 { font-weight: normal; }
+.middle h2 { font-size: 60%; font-weight: normal; }
+#left h2 { margin-right: 5px; }
+#right h1 { margin-left: 18px; }
+#right h2 { margin-left: 9px; }
+#error_404 #right h2 { padding-top: 150px; width: 0; overflow: visible; display: inline-block; }
+#right small { width: 0; overflow: visible; display: inline-block; margin-left: 8px; }
+#right h1 small { font-size: 50px; line-height: 55px; }
+#right h2 small { font-size: 40px; line-height: 45px; }
+.middle p { font-size: 10%; font-family: Verdana, serif; margin-top: 55px; margin-left: 3px; }
+.middle p.append { margin-top: 20px; margin-right: 3px; }
+.middle ul { font-size: 20%; font-family: Verdana, serif; margin-top: 50px; }
+.middle ul li { margin: 15px; }
+.container { top: 0; left: 0; width: 100%; height: 100%; }
+.vertical.container { position: fixed; display: table; }
+.center { text-align: center; margin-top: 50px; }
+.vertical.center { margin-top: 0; display: table-cell; vertical-align: middle; }
+a { text-decoration: none; color: inherit; }
+a:visited { color: inherit; }
+a:hover { color: #000; }
