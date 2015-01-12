@@ -150,7 +150,7 @@ body {width: 100%; float: left; opacity: 1; -webkit-transition: opacity 1s ease;
 ***********************/
 #container {padding: 60px 40px 100px;}
 header {width: 420px; float: left;}
-#main {margin-left: 300px; margin-right: 300px; margin-top: -25px;overflow: hidden;}
+#main {margin-left: 20%; margin-right: 20%; margin-top: -25px;overflow: hidden;}
 aside h3 {float: left;}
 
 /* Header
