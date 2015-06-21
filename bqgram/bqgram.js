@@ -16,7 +16,7 @@ var x_length = 0;
 var y_length = 0;
 
 
-var xPadding = 50;
+var xPadding = 100;
 var yPadding = 50;
 
 var fps = 50;
@@ -35,12 +35,12 @@ function draw_point(x, y){
   ctx.fill();
 }
 
-function draw_axis(min_x, max_x, min_y, max_y)
+function draw_axis(min_x, max_x, min_y, max_y, n)
 {
     //console.log(max_y);
     ctx.lineWidth = 2;
     ctx.strokeStyle = '#333';
-    ctx.font = '17pt sans-serif';
+    ctx.font = '10pt sans-serif';
     ctx.textAlign = "center";
 
     ctx.beginPath();
@@ -54,12 +54,15 @@ function draw_axis(min_x, max_x, min_y, max_y)
         draw_point(i / (max_x - min_x) * x_length + 0.5 * xPadding, ctx.canvas.height - 0.5 * yPadding);
         //console.log(max_x, min_x);
         //console.log(i, i / (max_x - min_x) * x_length + 0.5 * xPadding, ctx.canvas.height - 0.5 * yPadding);
-        ctx.fillText(i, i / (max_x - min_x) * x_length + 0.5 * xPadding, ctx.canvas.height - 0.05 * yPadding);
+        ctx.fillText(i, i / (max_x - min_x) * x_length + 0.5 * xPadding, ctx.canvas.height - 0.15 * yPadding);
     }
-    for (var i = min_y + 1; i <= Math.ceil(max_y); ++ i)
+    //console.log(n);
+    ctx.font = '10pt sans-serif';
+    for (var i = min_y; i <= Math.ceil(max_y); i = i + 1)
     {
         draw_point(0.5 * xPadding, ctx.canvas.height - 0.5 * yPadding - i / (max_y - min_y) * y_length);
-        ctx.fillText(i, 0.3 * xPadding, ctx.canvas.height - 0.4 * yPadding - i / (max_y - min_y) * y_length);
+        var val = i / n;
+        ctx.fillText(val.toFixed(2), 0.3 * xPadding, ctx.canvas.height - 0.4 * yPadding - i / (max_y - min_y) * y_length);
     }
     ctx.closePath();
 }
@@ -95,7 +98,7 @@ function init_bqgram(json_data)
 
     }
     //init axis
-    draw_axis(min_x, max_x, 0, max_y * 1.1);
+    draw_axis(min_x, max_x, 0, max_y * 1.1, box_array.length);
     //console.log(max_y);
     //draw boxes
     //draw_bqgram_frame();
